@@ -41,7 +41,8 @@ Created a JSON that maps rank to ID/Title
 Replace `"id": "(\d+)"` with `"id": "$1", "href": "https://www.buergerhaushalt-stuttgart.de/vorschlag/$1"`
 to add a direct-link to each json entry.
 
-Can render all those direct links as html:
+Can render all those direct links as:
 
+    sh csv-to-md.sh 2023/ranking.csv 2023/README.md
     sh csv-to-html.sh 2023/ranking.csv 2023/index.html
 
