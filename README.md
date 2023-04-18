@@ -26,7 +26,11 @@ Comments | `id="comments"`
 2. Saved that list as `.csv`
 3. [Created a JSON that maps rank to ID/Title](#map-rank-to-id)
 
+***NOTE: CSV has actually been modified afterwards to be displayable in github***
+
 ## Map Rank to ID
+
+Created a JSON that maps rank to ID/Title
 
 1. Replace `"` with `\"` to escape `"`
 2. REGEX Replace: `(\d+) \| (\d+) \| (.*)` with `"$1": {"id": "$2", "title": "$3"},`
@@ -36,3 +40,8 @@ Comments | `id="comments"`
 
 Replace `"id": "(\d+)"` with `"id": "$1", "href": "https://www.buergerhaushalt-stuttgart.de/vorschlag/$1"`
 to add a direct-link to each json entry.
+
+Can render all those direct links as html:
+
+    sh csv-to-html.sh 2023/ranking.csv 2023/index.html
+
