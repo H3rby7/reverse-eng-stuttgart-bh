@@ -15,5 +15,5 @@ echo "# Direct Links" > $output
 
 while IFS=", " read -r rank id link titel
 do
-  echo "1. [$rank | $id]($link)" >> $output
+  echo "1. [$id]($link)" >> $output
 done <<< $inputNoQuotes
