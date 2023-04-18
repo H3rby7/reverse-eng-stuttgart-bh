@@ -6,7 +6,7 @@ State 2023-04-18
 
 # One Entry
 
-Direct link for an entry is: https://www.buergerhaushalt-stuttgart.de/vorschlag/${ID}.
+Direct link for an entry is: https://www.buergerhaushalt-stuttgart.de/vorschlag/${ID}
 
 ## HTML Contains
 
@@ -31,3 +31,8 @@ Comments | `id="comments"`
 1. Replace `"` with `\"` to escape `"`
 2. REGEX Replace: `(\d+) \| (\d+) \| (.*)` with `"$1": {"id": "$2", "title": "$3"},`
 3. Surround with `{}`
+
+## Generate Hyperlink
+
+Replace `"id": "(\d+)"` with `"id": "$1", "href": "https://www.buergerhaushalt-stuttgart.de/vorschlag/$1"`
+to add a direct-link to each json entry.
