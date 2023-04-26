@@ -46,3 +46,4 @@ Can render all those direct links as:
     sh csv-to-md.sh 2023/ranking.csv 2023/README.md
     sh csv-to-html.sh 2023/ranking.csv 2023/index.html
 
+For `md` also need to replace `\n\]` with `]`

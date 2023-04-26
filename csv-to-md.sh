@@ -12,8 +12,11 @@ output=$2
 inputNoQuotes=`tr -d '"' < $input`
 
 echo "# Direct Links" > $output
+echo "" > $output
 
-while IFS=", " read -r rank id link titel
+while IFS=", " read -r rank id link title
 do
-  echo "1. [$id]($link)" >> $output
+  echo "1. [$title]($link)" >> $output
 done <<< $inputNoQuotes
+
+echo "" > $output
